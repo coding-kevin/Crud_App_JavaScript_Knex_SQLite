@@ -20,7 +20,7 @@ Using `npm run start` with start the server, but will not restart the server whe
 
 ## Database
 
-We have provided a ready-to-go [SQLite](https://www.sqlite.org/index.html) database, using [Knex](https://knexjs.org/). These are just like SQL, and will work right out the box. If you do not wish to use these, that is perfectly acceptable. We have provided them as a means to save time configuring a data store. 
+We have provided a ready-to-go [SQLite](https://www.sqlite.org/index.html) database, using [Knex](https://knexjs.org/). These are just like SQL, and will work right out the box. If you do not wish to use these, that is perfectly acceptable. We have provided them as a means to save time configuring a data store.
 
 If you prefer to use Mongo, ElasticSearch, etc, **please feel free to do so. It is NOT REQUIRED that you use what we have provided**. Use whatever you're most comfortable with.
 
@@ -36,11 +36,11 @@ You may also change the URL path to fit whatever meets your needs. We just want 
 
 ### Get an entity
 
-- [ ] A GET request to `/entity/:id` returns the given entity, or a 404 status code if that entity does not exist.
+- [ X ] A GET request to `/entity/:id` returns the given entity, or a 404 status code if that entity does not exist.
 
 ### Creating an Entity
 
-- [ ] A POST request to `/entity` creates a new entity
+- [ X ] A POST request to `/entity` creates a new entity
 
 #### Bonus
 
@@ -49,15 +49,14 @@ You may also change the URL path to fit whatever meets your needs. We just want 
 
 ### Delete an entity
 
-- [ ] A DELETE request to `/entity/:id` deletes the given entity, or a 404 status code if that entity does not exist.
-- [ ] A 200 status code, with a message of 'ok' or something similar is returned upon successful deletion.
+- [ X ] A DELETE request to `/entity/:id` deletes the given entity, or a 404 status code if that entity does not exist.
+- [ X ] A 200 status code, with a message of 'ok' or something similar is returned upon successful deletion.
 
 ### Search an entity
 
-- [ ] A GET request to `/entity` ( or whatever the plural version of your entity is ) returns a list of entities.
+- [ X ] A GET request to `/entity` ( or whatever the plural version of your entity is ) returns a list of entities.
 
 #### Bonus
-
 
 As a bonus, allow a set of JSON API standard query arguments to be applied on the request to filter, sort, and limit the entities being returned.
 
@@ -77,15 +76,15 @@ This refers to the naming of variables, function calls, etc. Basically looking f
 
 There is an existing ESLint config / Prettier config. It's really helpful to not have to sort through formatting changes during PR's. It's sometimes confusing to see a large change that isn't actually a code change while reviewing a PR. We use both ESLint and Prettier mainly to stay all on the same page, and to not have to think about formatting in a manual way.
 
-- [ ] ESLint passes
-- [ ] Prettier passes
+- [ X ] ESLint passes
+- [ X ] Prettier passes
 
-### Types
+<!-- ### Types
 
-*_Skip if not using TypeScript_
+\*_Skip if not using TypeScript_
 
-TypeScript is an important part of our stack, and good types are essential to maintain speed when switching to different parts of the app. 
+TypeScript is an important part of our stack, and good types are essential to maintain speed when switching to different parts of the app.
 
 - [ ] Types are named consistently
 - [ ] Types are accurate and appropriate to the scenario
-- [ ] Compiler does not output any errors
+- [ ] Compiler does not output any errors -->

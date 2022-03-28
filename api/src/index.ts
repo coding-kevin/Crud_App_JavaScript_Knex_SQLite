@@ -1,35 +1,63 @@
 import express from 'express'
 import cors from 'cors'
 
-import { setupDb } from './sqlite'
+const db = require('../dbConfig')
 
 const app = express()
+app.use(express.json())
 app.use(cors())
 
-/**
- * Test ping, this is used by the UI to determine if they are connected properly.
- * Once you see the connected message on the UI, you can remove this if you want to.
- */
-app.get('/ping', (_, res) => {
-  res.send('pong')
+app.get('/mountains', async (req, res) => {
+  try {
+    const mountains = await db('mountains')
+    if (mountains.length < 1) {
+      res.status(404).json({ message: 'Mountains not found' })
+    } else {
+      res.status(200).json(mountains)
+    }
+  } catch (err) {
+    console.log(err)
+  }
 })
-
-app.get('/entity', (req, res) => {
-  // fetch many entities
+app.get('/mountains/:id', async (req, res) => {
+  const id = req.params
+  try {
+    const specificMountain = await db('mountains').where(id)
+    if (specificMountain.length < 1) {
+      res.status(404).json({ message: 'Mountain not found' })
+    } else {
+      res.status(200).json(specificMountain)
+    }
+  } catch (err) {
+    console.log(err)
+  }
 })
-app.post('/entity', (req, res) => {
-  // create a single entity
+app.post('/mountains', async (req, res) => {
+  const newMountain = req.body
+  try {
+    await db('mountains').insert(newMountain)
+    res.status(201).json({ message: 'Mountain added' })
+  } catch (err) {
+    console.log(err)
+  }
 })
-app.delete('/entity/:id', (req, res) => {
-  // delete a single entity
-})
-app.get('/entity/:id', (req, res) => {
-  // fetch a single entity
+app.delete('/mountains/:id', async (req, res) => {
+  const id = req.params
+  try {
+    const mountains = await db('mountains').where(id)
+    if (mountains < 1) {
+      res.status(404).json({ message: 'Mountain not found' })
+    } else {
+      await db('mountains').where(id).del()
+      res.status(200).json({ message: 'Mountain deleted' })
+    }
+  } catch (err) {
+    console.log(err)
+  }
 })
 
 app.listen(5010, async () => {
   try {
-    await setupDb()
     console.log('🚀 Skynet is active')
   } catch (e) {
     console.error(e)

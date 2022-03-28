@@ -12,3 +12,53 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+form {
+  text-align: center;
+}
+
+input {
+  margin: 5px;
+}
+
+td {
+  padding: 10px;
+}
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.entity-details {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+
+.page-cant-load {
+  text-align: center;
+}
+
+/* Remove arrows from number input */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}

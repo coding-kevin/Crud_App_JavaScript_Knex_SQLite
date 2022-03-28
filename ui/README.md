@@ -20,7 +20,7 @@ Here is what we are looking for, and how your submission will be graded.
 
 ### Landing page shows list of all entities
 
-- [ ] Going to the homepage `/` will provide a list of all the entities.
+- [ X ] Going to the homepage `/` will provide a list of all the entities.
   - This can be displayed however you wish, for example a table. Whatever you think is appropriate.
 
 #### Bonus
@@ -34,27 +34,26 @@ Here is what we are looking for, and how your submission will be graded.
 
 <!-- Change to no need for Router - be ambiguous -->
 
-- [ ] Clicking on an entity in the list navigates to a more detailed view of that specific entity.
-- [ ] This page should show all the attributes of the entity. 
-- [ ] **There needs to be at least one extra attribute shown on this page that is not shown on the list page.**
-- [ ] Pasting a URL into the browser with the ID of the entity should show the entity detailed view.
+- [ X ] Clicking on an entity in the list navigates to a more detailed view of that specific entity.
+- [ X ] This page should show all the attributes of the entity.
+- [ X ] **There needs to be at least one extra attribute shown on this page that is not shown on the list page.**
+- [ X ] Pasting a URL into the browser with the ID of the entity should show the entity detailed view.
   - For example, localhost:3000/123 would show the details for item `123`. You can make this URL whatever you wish, as long as pasting the URL into a new tab or window loads the correct page.
-- [ ] If the provided ID does not exist, a message should be shown saying as much, with an option to go back to the main list page.
-- [ ] Provide a way to get back to the list page without using the browser controls.
+- [ X ] If the provided ID does not exist, a message should be shown saying as much, with an option to go back to the main list page.
+- [ X ] Provide a way to get back to the list page without using the browser controls.
 
 ### Deleting an entity
 
 <!-- User sees list after delete -->
 
-- [ ] Provide the ability to delete an entity.
-- [ ] After deleting an entity, the user is taken to the home, list page, with an updated list reflecting the changes ( the deleted entity **is not** in the list ).
+- [ X ] Provide the ability to delete an entity.
+- [ X - delete function is carried out on the homepage already] After deleting an entity, the user is taken to the home, list page, with an updated list reflecting the changes ( the deleted entity **is not** in the list ).
 
 ### Creating a new entity
 
-- [ ] On the list page, provide a way for the user to create a new entity.
-- [ ] After creating an entity, the user is taken to the home, list page, with an updated list reflecting the changes ( the created entity **is** in the list ).
+- [ X ] On the list page, provide a way for the user to create a new entity.
+- [ X ] After creating an entity, the user is taken to the home, list page, with an updated list reflecting the changes ( the created entity **is** in the list ).
 
 #### Bonus
 
-- [ ] Validate the inputs on the front end before sending the request.
- 
+- [ X ] Validate the inputs on the front end before sending the request.
